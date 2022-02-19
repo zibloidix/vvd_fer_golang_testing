@@ -8,7 +8,7 @@ describe("First test", () => {
       })
 
       it('АТ_Э_ГЛВ: КНОП_НАЧАТЬ_ЕСТЬ', () => {
-        cy.get('#wellcome-to-service > div > div > div.card-body.p-4 > div.row.pt-4 > div > div > button > span').should('have.text', 'Начать')
+        cy.get('#wellcome-to-service > div > div > div.card-body.p-4 > div.row.pt-4 > div > div > button').should('have.length', 1)
       })
 
       it('АТ_Э_ГЛВ: КНОП_НАЧАТЬ_КЛИК', () => {
@@ -113,12 +113,99 @@ describe("First test", () => {
         cy.get('#hospital-list').its('length').should('be.gte', 0)
       })
 
+      it('АТ_Э_ПЦНТ: КНОП_МО_КЛИК', () => {
+        cy.get('#header_194701 > button').click()
+        cy.wait(1000)
+      })
 
-      // #header_194701 > button
+      it('АТ_Э_ПЦНТ: КНОП_МО_ВЫБОР_КЛИК', () => {
+        cy.get('#target194701 > div > div.row.pt-4.pb-3 > div > div > button').click()
+        cy.wait(1000)
+      })
 
-      // #get-mo-info-extended > div > div.card.shadow-sm.mb-4 > div > div.row.pt-4 > div > div > input
+      it('АТ_Э_СПЕЦ: ОТКРЫТЬ', () => {
+        cy.get('#get-service-specs-info').should('have.length', 1)
+      })
 
-// #get-patient-data > div > div.card.shadow-sm.mb-4 > div > div:nth-child(11) > div > button
+      it('АТ_Э_СПЕЦ: СПИСОК_СПЕЦ_ЕСТЬ', () => {
+        cy.get('#get-service-specs-info > div > div.card.shadow-sm.mb-4 > div > div.row.py-4 > div > div').should('have.length', 1)
+      })
+
+      it('АТ_Э_СПЕЦ: СПИСОК_СПЕЦ_НЕ_ПУСТ', () => {
+        cy.get('#get-service-specs-info > div > div.card.shadow-sm.mb-4 > div > div.row.py-4 > div > div > button').its('length').should('be.gte', 0)
+      })
+
+      it('АТ_Э_СПЕЦ: СПИСОК_СПЕЦ_ВЫБОР_КЛИК', () => {
+        cy.get('#get-service-specs-info > div > div.card.shadow-sm.mb-4 > div > div.row.py-4 > div > div > button:nth-child(1)').click()
+        cy.wait(1000)
+      })
+
+      it('АТ_Э_ВРАЧ: ОТКРЫТЬ', () => {
+        cy.get('#get-resource-info').should('have.length', 1)
+      })
+
+      it('АТ_Э_ВРАЧ: СПИСОК_ВРАЧ_ЕСТЬ', () => {
+        cy.get('#get-resource-info > div > div.card.shadow-sm.mb-4 > div > div.row.py-4 > div > div').should('have.length', 1)
+      })
+
+      it('АТ_Э_ВРАЧ: СПИСОК_ВРАЧ_НЕ_ПУСТ', () => {
+        cy.get('#get-resource-info > div > div.card.shadow-sm.mb-4 > div > div.row.py-4 > div > div > button').its('length').should('be.gte', 0)
+      })
+
+      it('АТ_Э_ВРАЧ: СПИСОК_ВРАЧ_ВЫБОР_КЛИК', () => {
+        cy.get('#get-resource-info > div > div.card.shadow-sm.mb-4 > div > div.row.py-4 > div > div > button:nth-child(1)').click()
+        cy.wait(1000)
+      })
+
+      it('АТ_Э_СЛОТ: ОТКРЫТЬ', () => {
+        cy.get('#get-schedule-info').should('have.length', 1)
+      })
+
+      it('АТ_Э_СЛОТ: СПИСОК_СЛОТ_ЕСТЬ', () => {
+        cy.get('#get-schedule-info > div > div.card.shadow-sm.mb-4 > div > div.row.py-4 > div > div').should('have.length', 1)
+      })
+
+      it('АТ_Э_СЛОТ: СПИСОК_СЛОТ_НЕ_ПУСТ', () => {
+        cy.get('#get-schedule-info > div > div.card.shadow-sm.mb-4 > div > div.row.py-4 > div > div > button').its('length').should('be.gte', 0)
+      })
+
+      it('АТ_Э_СЛОТ: СПИСОК_СЛОТ_ВЫБОР_КЛИК', () => {
+        cy.get('#get-schedule-info > div > div.card.shadow-sm.mb-4 > div > div.row.py-4 > div > div > button:nth-child(1)').click()
+        cy.wait(1000)
+      })
+
+      it('АТ_Э_ЗАП: ОТКРЫТЬ', () => {
+        cy.get('#create-appointment').should('have.length', 1)
+      })
+
+      it('АТ_Э_ЗАП: КНОП_ЗАП_ЕСТЬ', () => {
+        cy.get('#create-appointment > div > div.card.shadow-sm.mb-4 > div > div.row.pt-2 > div > button').should('have.length', 1)
+      })
+
+      it('АТ_Э_ЗАП: КНОП_ЗАП_КЛИК', () => {
+        cy.get('#create-appointment > div > div.card.shadow-sm.mb-4 > div > div.row.pt-2 > div > button').click()
+        cy.wait(1000)
+      })
+
+      
+      
+
+      
+      
+
+      
+
+
+
+      
+
+      
+
+      
+      
+
+      
+
       
 
 
